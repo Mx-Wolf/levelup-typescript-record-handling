@@ -17,7 +17,6 @@ export interface AccountEntry {
 }
 
 export interface AccountDaily {
-  accountId:number;
   date: string;
   debitDayTotal: number;
   creditDayTotal: number;
