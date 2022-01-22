@@ -1,15 +1,15 @@
 export interface GeneralLedgerEntry {
   generalLedgerId: number;
-  posted: Date;
+  posted: string;
   debitAccountId: string;
   creditAccountId: string;
   amount: number;
-  reference: string;
+  referenceId: string;
 }
 
 export interface AccountEntry {
   generalLedgerId: number;
-  posted: Date;
+  posted: string;
   otherAccountId: string;
   debitAmount?: number | undefined;
   creditAmount?: number | undefined;
@@ -18,7 +18,7 @@ export interface AccountEntry {
 
 export interface AccountDaily {
   accountId:number;
-  date: number;
+  date: string;
   debitDayTotal: number;
   creditDayTotal: number;
 }
