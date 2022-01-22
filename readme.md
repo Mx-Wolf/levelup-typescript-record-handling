@@ -19,3 +19,6 @@ export interface GeneralLedgerEntry {
 }
 ```
 
+## О tsconfig.json
+
+TypeScript по умолчанию не добавляет .json файлы при компиляции проекта. Вам нужно указать флаг компилятора `"resolveJsonModule": true`
