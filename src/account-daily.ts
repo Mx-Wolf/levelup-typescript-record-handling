@@ -15,7 +15,7 @@ const createAccountDaily = (date:string):AccountDaily=>({
   debitDayTotal: 0,
 });
 
-const setMapThough = (accumulator:Map<string,AccountDaily>, row:AccountDaily)=>{
+const setMapThrough = (accumulator:Map<string,AccountDaily>, row:AccountDaily)=>{
   accumulator.set(row.date,row);
   return row;
 };
@@ -25,7 +25,7 @@ const getDate = (dateTime: string) => dateTime.substring(0, 10);
 const getOrCreateDaily = (accumulator: Map<string, AccountDaily>, dateFull: string): AccountDaily => {
   const date = getDate(dateFull);
   const stored = accumulator.get(date);
-  return typeof stored !== 'undefined'? stored: setMapThough(accumulator, createAccountDaily(date));
+  return typeof stored !== 'undefined'? stored: setMapThrough(accumulator, createAccountDaily(date));
 };
 
 const createReducer = (accountId: string) => {
